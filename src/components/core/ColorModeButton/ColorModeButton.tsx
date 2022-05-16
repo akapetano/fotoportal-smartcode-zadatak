@@ -17,6 +17,7 @@ export const ColorModeButton = ({ ...restProps }: IconButtonProps) => {
       rounded="full"
       onClick={toggleColorMode}
       icon={<SwitchIcon />}
+      _hover={{ bg: '#F68B1E' }}
       {...restProps}
     />
   );

@@ -17,7 +17,7 @@ export const Navbar = () => {
       <Logo />
       <Flex justifyContent="space-evenly" alignItems="center">
         <Divider orientation="vertical" h="22px" borderColor={dividerColor} />
-        <HStack spacing={64}>
+        <HStack spacing={{ base: 32, md: 64 }}>
           <NavbarItems direction={{ base: 'column', md: 'row' }} />
           <HStack>
             <ColorModeButton aria-label="Color Mode button" />

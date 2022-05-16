@@ -1,6 +1,7 @@
 import { Heading } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import { SearchBar } from '../src/components/core/SearchBar/SeachBar';
 import { Layout } from '../src/components/shared/Layout/Layout';
 
 const Home: NextPage = () => {
@@ -15,7 +16,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main></main>
+      <main>
+        <SearchBar />
+      </main>
 
       <footer></footer>
     </Layout>
