@@ -13,7 +13,17 @@ export const NavbarItems = ({ ...restProps }: StackProps) => {
   return (
     <Stack as="nav" spacing={4} {...restProps}>
       {NAV_ITEMS.map((navItem, index) => {
-        return <NavbarItem key={navItem + index} to="/" linkName={navItem} />;
+        return (
+          <NavbarItem
+            key={navItem + index}
+            to={
+              navItem === 'Naslovnica'
+                ? '/'
+                : `/${navItem.replace(/\s+/g, '-').toLowerCase()}`
+            }
+            linkName={navItem}
+          />
+        );
       })}
     </Stack>
   );
