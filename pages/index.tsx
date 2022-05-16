@@ -1,10 +1,11 @@
-import { Box } from '@chakra-ui/react';
+import { Heading } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import { Layout } from '../src/components/shared/Layout/Layout';
 
 const Home: NextPage = () => {
   return (
-    <Box bg="white">
+    <Layout>
       <Head>
         <title>FotoPortal</title>
         <meta
@@ -14,12 +15,10 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <h1>FotoPortal - web portal za fotografije</h1>
-      </main>
+      <main></main>
 
       <footer></footer>
-    </Box>
+    </Layout>
   );
 };
 

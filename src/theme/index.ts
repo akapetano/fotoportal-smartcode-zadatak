@@ -1,9 +1,4 @@
-import {
-  extendTheme,
-  theme as base,
-  withDefaultColorScheme,
-  withDefaultVariant,
-} from '@chakra-ui/react';
+import { extendTheme, theme as base } from '@chakra-ui/react';
 import { mode } from '@chakra-ui/theme-tools';
 
 const breakpoints = {
@@ -17,12 +12,13 @@ const breakpoints = {
 const theme = extendTheme({
   colors: {
     brand: {
-      50: '#E8E8E8',
-      100: '#50A156',
+      50: '#E5E5E5',
+      100: '#E8E8E8',
       200: '#212121',
     },
     accent: {
       50: '#F68B1E',
+      100: '#F52489',
     },
   },
   fonts: {
@@ -33,12 +29,10 @@ const theme = extendTheme({
     IconButton: {
       variants: {
         primary: (props: any) => ({
-          backgroundColor: mode('brand.200', 'brand.100')(props),
-          color: mode('white', 'gray.800')(props),
-
+          color: mode('black', 'gray.800')(props),
           transition: 'background-color .3s ease',
           _hover: {
-            backgroundColor: mode('brand.300', 'brand.50')(props),
+            backgroundColor: mode('accent.50', 'accent.50')(props),
           },
         }),
         secondary: (props: any) => ({
@@ -76,10 +70,9 @@ const theme = extendTheme({
     Button: {
       variants: {
         primary: (props: any) => ({
-          rounded: 'md',
-
-          color: mode('white', 'gray.800')(props),
-          backgroundColor: mode('brand.200', 'brand.100')(props),
+          rounded: 'full',
+          color: mode('pink', 'gray.800')(props),
+          backgroundColor: mode('gray.600', 'brand.100')(props),
 
           _hover: {
             backgroundColor: mode('brand.300', 'brand.50')(props),
