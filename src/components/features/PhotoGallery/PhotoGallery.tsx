@@ -1,13 +1,21 @@
-import { Container, Flex, Heading, Button } from '@chakra-ui/react';
+import {
+  Container,
+  Flex,
+  Heading,
+  Button,
+  useColorModeValue,
+} from '@chakra-ui/react';
 import { ChevronRightIcon } from '@chakra-ui/icons';
 import { PhotoGalleryGrid } from './PhotoGalleryGrid/PhotoGalleryGrid';
 
 export const PhotoGallery = () => {
+  const photoGalleryBg = useColorModeValue('#E5E5E5', 'gray.700');
+
   return (
     <Container
       h="55rem"
       maxWidth="container.xl"
-      bg="#E5E5E5"
+      bg={photoGalleryBg}
       p="4rem 2rem 0 2rem"
     >
       <Flex justifyContent="space-between">
