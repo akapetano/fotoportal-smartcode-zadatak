@@ -5,6 +5,7 @@ import { SearchBar } from '../src/components/core/SearchBar/SeachBar';
 import { PhotoDetails } from '../src/components/features/PhotoDetails/PhotoDetails';
 import { PhotoOverview } from '../src/components/features/PhotoOverview/PhotoOverview';
 import { Layout } from '../src/components/shared/Layout/Layout';
+import { LayoutMain } from '../src/components/shared/LayoutMain/LayoutMain';
 
 const Home: NextPage = () => {
   return (
@@ -18,11 +19,11 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Container as="main" maxWidth="container.xl">
+      <LayoutMain>
         <SearchBar />
         <PhotoOverview />
         <PhotoDetails />
-      </Container>
+      </LayoutMain>
 
       <footer></footer>
     </Layout>
