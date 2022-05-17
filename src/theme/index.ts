@@ -29,7 +29,8 @@ const theme = extendTheme({
     IconButton: {
       variants: {
         primary: (props: any) => ({
-          color: mode('black', 'gray.800')(props),
+          color: mode('white', 'gray.200')(props),
+          backgroundColor: mode('black', 'gray.700')(props),
           transition: 'background-color .3s ease',
           _hover: {
             backgroundColor: mode('accent.50', 'accent.50')(props),

@@ -8,6 +8,7 @@ export const SearchBar = () => {
         w="80vw"
         placeholder="Pretraži ponudu agencija"
         px="5rem"
+        fontSize="sm"
         _focus={{ borderColor: '#F68B1E' }}
       />
     </Flex>
