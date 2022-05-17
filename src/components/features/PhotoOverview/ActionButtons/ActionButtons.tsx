@@ -19,6 +19,7 @@ export const ActionButtons = () => {
           rounded="full"
           w="80%"
           leftIcon={<ArrowDownIcon />}
+          _hover={{ bg: '#F68B1E' }}
         >
           Preuzmi sadržaj
         </Button>
@@ -28,10 +29,22 @@ export const ActionButtons = () => {
           alignItems="center"
           justifyContent="center"
         >
-          <Button fontSize="sm" fontWeight="normal" rounded="full" w="39%">
+          <Button
+            fontSize="sm"
+            fontWeight="normal"
+            rounded="full"
+            w="39%"
+            _hover={{ bg: '#F68B1E' }}
+          >
             Pošalji u sustav
           </Button>
-          <Button fontSize="sm" fontWeight="normal" rounded="full" w="39%">
+          <Button
+            fontSize="sm"
+            fontWeight="normal"
+            rounded="full"
+            w="39%"
+            _hover={{ bg: '#F68B1E' }}
+          >
             Pošalji u CMS
           </Button>
         </ButtonGroup>
