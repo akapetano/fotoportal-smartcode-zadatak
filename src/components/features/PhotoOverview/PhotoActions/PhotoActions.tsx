@@ -22,7 +22,6 @@ export const PhotoActions = () => {
         <Icon as={InfoIcon} />
       </Flex>
       <PhotoSizeAndPrice />
-
       <Checkbox colorScheme="orange" size="sm" p="0.5rem">
         Preuzmi s potpisom autora
       </Checkbox>

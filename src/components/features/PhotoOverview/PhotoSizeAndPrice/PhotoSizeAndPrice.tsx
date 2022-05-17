@@ -4,7 +4,7 @@ export const PhotoSizeAndPrice = () => {
   return (
     <Box border="1px solid lightgray" w="80%" rounded="lg">
       <Flex alignItems="center" p="1rem">
-        <Text>IMAGE 001</Text>
+        <Text fontWeight="bold">IMAGE 001</Text>
       </Flex>
       <Divider />
       <RadioGroup defaultValue="1">
