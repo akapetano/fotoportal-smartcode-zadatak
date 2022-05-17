@@ -6,14 +6,15 @@ import {
   HStack,
   Box,
   Divider,
+  FlexProps,
 } from '@chakra-ui/react';
 import { InfoIcon } from '@chakra-ui/icons';
 import { PhotoSizeAndPrice } from '../PhotoSizeAndPrice/PhotoSizeAndPrice';
 import { ActionButtons } from '../ActionButtons/ActionButtons';
 
-export const PhotoActions = () => {
+export const PhotoActions = ({ ...restProps }: FlexProps) => {
   return (
-    <Flex h="600px" w="20vw" flexDirection="column" alignItems="center">
+    <Flex h="600px" flexDirection="column" alignItems="center" {...restProps}>
       <Divider />
       <Flex justifyContent="space-between" alignItems="center" pt="1rem">
         <Text fontSize="sm" p="0.5rem">

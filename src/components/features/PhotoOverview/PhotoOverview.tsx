@@ -5,8 +5,8 @@ import { SelectedPhotoPreview } from './SelectedPhotoPreview/SelectedPhotoPrevie
 export const PhotoOverview = () => {
   return (
     <Flex>
-      <SelectedPhotoPreview />
-      <PhotoActions />
+      <SelectedPhotoPreview w="70vw" />
+      <PhotoActions w="30vw" />
     </Flex>
   );
 };

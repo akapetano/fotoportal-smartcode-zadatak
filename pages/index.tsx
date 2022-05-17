@@ -1,4 +1,4 @@
-import { Heading } from '@chakra-ui/react';
+import { Container, Heading } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { SearchBar } from '../src/components/core/SearchBar/SeachBar';
@@ -18,11 +18,11 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
+      <Container as="main" maxWidth="container.xl">
         <SearchBar />
         <PhotoOverview />
         <PhotoDetails />
-      </main>
+      </Container>
 
       <footer></footer>
     </Layout>

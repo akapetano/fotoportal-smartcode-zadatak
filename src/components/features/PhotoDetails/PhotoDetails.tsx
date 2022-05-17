@@ -6,8 +6,8 @@ import { PhotoInfo } from './PhotoInfo/PhotoInfo';
 export const PhotoDetails = () => {
   return (
     <Flex>
-      <Flex p="3rem 2rem" w="80vw" flexDirection="column">
-        <Stack spacing={[24, 32, 48, 80, 96]} w="100%" direction="row">
+      <Flex p="3rem 2rem" w="70vw" flexDirection="column">
+        <Stack spacing={[24, 32, 48, 64, 64]} direction="row">
           <PhotoInfo heading="Galerija" text="Stock" />
           <PhotoInfo heading="Autor" text="Ivan Horvat" />
           <PhotoInfo heading="Agencija" text="Smart Code" />
@@ -15,12 +15,7 @@ export const PhotoDetails = () => {
         <PhotoDescription />
         <PhotoKeywords />
       </Flex>
-      <Stack
-        p="0 2rem 3rem 2rem"
-        w="20vw"
-        flexDirection="column"
-        spacing="1.5rem"
-      >
+      <Stack p="0 0 3rem 3rem" w="30vw" flexDirection="column" spacing="1.5rem">
         <PhotoInfo
           heading="Posebne napomene"
           text="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."

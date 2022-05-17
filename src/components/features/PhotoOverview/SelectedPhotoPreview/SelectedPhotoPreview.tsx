@@ -13,7 +13,7 @@ export const SelectedPhotoPreview = ({ ...restProps }: FlexProps) => {
       bg={selectedPhotoPreviewBackground}
       justifyContent="center"
       p="2rem"
-      w="80vw"
+      {...restProps}
     >
       <Image
         src="https://i2-prod.hulldailymail.co.uk/incoming/article5880829.ece/ALTERNATES/s1200c/0_cobweb-921039_1920.jpg"

@@ -2,7 +2,7 @@ import { Input, Flex } from '@chakra-ui/react';
 
 export const SearchBar = () => {
   return (
-    <Flex justifyContent="center" alignItems="center" h="101px" w="100vw">
+    <Flex justifyContent="center" alignItems="center" h="7rem">
       <Input
         rounded="full"
         w="80vw"

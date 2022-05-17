@@ -6,6 +6,7 @@ export const NavbarWrapper = ({ ...restProps }: FlexProps) => {
       justifyContent="space-around"
       alignItems="center"
       h="62px"
+      w="100vw"
       boxShadow="0 3px 10px 0 rgba(0, 0, 0, 0.1 )"
       {...restProps}
     />
