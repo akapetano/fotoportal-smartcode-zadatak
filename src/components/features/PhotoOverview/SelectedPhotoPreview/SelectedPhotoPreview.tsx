@@ -1,4 +1,4 @@
-import { Flex, FlexProps, useColorModeValue } from '@chakra-ui/react';
+import { Box, Flex, FlexProps, useColorModeValue } from '@chakra-ui/react';
 import Image from 'next/image';
 
 export const SelectedPhotoPreview = ({ ...restProps }: FlexProps) => {
@@ -15,13 +15,13 @@ export const SelectedPhotoPreview = ({ ...restProps }: FlexProps) => {
       p="2rem"
       {...restProps}
     >
-      <Image
-        src="https://i2-prod.hulldailymail.co.uk/incoming/article5880829.ece/ALTERNATES/s1200c/0_cobweb-921039_1920.jpg"
-        alt="Spider web"
-        height="527px"
-        width="448px"
-        unoptimized
-      />
+      <Box position="relative" height="527px" width="448px">
+        <Image
+          src="/images/norbert-velescu-web-unsplash.jpg"
+          alt="Spider web"
+          layout="fill"
+        />
+      </Box>
     </Flex>
   );
 };
