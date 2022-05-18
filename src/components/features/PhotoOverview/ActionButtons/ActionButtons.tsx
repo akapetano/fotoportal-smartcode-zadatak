@@ -14,12 +14,10 @@ export const ActionButtons = () => {
         mt="1.5rem"
       >
         <Button
+          variant="tertiary"
           textTransform="uppercase"
-          fontSize="sm"
-          rounded="full"
           w="80%"
           leftIcon={<ArrowDownIcon />}
-          _hover={{ bg: '#F68B1E' }}
         >
           Preuzmi sadržaj
         </Button>
@@ -29,22 +27,10 @@ export const ActionButtons = () => {
           alignItems="center"
           justifyContent="center"
         >
-          <Button
-            fontSize="sm"
-            fontWeight="normal"
-            rounded="full"
-            w="39%"
-            _hover={{ bg: '#F68B1E' }}
-          >
+          <Button variant="tertiary" fontWeight="normal" w="39%">
             Pošalji u sustav
           </Button>
-          <Button
-            fontSize="sm"
-            fontWeight="normal"
-            rounded="full"
-            w="39%"
-            _hover={{ bg: '#F68B1E' }}
-          >
+          <Button variant="tertiary" fontWeight="normal" w="39%">
             Pošalji u CMS
           </Button>
         </ButtonGroup>
@@ -59,28 +45,20 @@ export const ActionButtons = () => {
       >
         <VStack w="100%">
           <Button
+            variant="primary"
             textTransform="uppercase"
             fontSize="sm"
             rounded="full"
             w="80%"
-            bg="black"
-            color="white"
-            border="1px solid black"
-            transition="all .3s ease"
-            _hover={{ bg: 'white', color: 'black' }}
           >
             Dodaj u košaricu
           </Button>
           <Button
+            variant="secondary"
             fontSize="sm"
             rounded="full"
             w="80%"
-            bg="white"
-            color="black"
-            border="1px solid black"
             leftIcon={<ArrowDownIcon />}
-            transition="all .3s ease"
-            _hover={{ bg: 'black', color: 'white' }}
           >
             Preuzmi pregledni primjerak
           </Button>

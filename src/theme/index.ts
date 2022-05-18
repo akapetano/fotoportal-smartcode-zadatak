@@ -26,30 +26,6 @@ const theme = extendTheme({
     body: `Open Sans, ${base.fonts?.body}`,
   },
   components: {
-    IconButton: {
-      variants: {
-        primary: (props: any) => ({
-          color: mode('white', 'gray.200')(props),
-          backgroundColor: mode('black', 'gray.700')(props),
-          transition: 'background-color .3s ease',
-          _hover: {
-            backgroundColor: mode('accent.50', 'accent.50')(props),
-          },
-        }),
-        secondary: (props: any) => ({
-          backgroundColor: 'black',
-          color: mode('white', 'gray.800')(props),
-          transition: 'background-color .3s ease',
-          _hover: {
-            _disabled: {
-              backgroundColor: 'transparent',
-              color: 'brand.300',
-            },
-            backgroundColor: mode('brand.300', 'brand.50')(props),
-          },
-        }),
-      },
-    },
     Link: {
       baseStyle: (props: any) => ({
         color: mode('brand.200', 'brand.50')(props),
@@ -61,10 +37,12 @@ const theme = extendTheme({
     Badge: {
       variants: {
         primary: (props: any) => ({
-          backgroundColor: mode('gray.600', 'gray.400')(props),
-          color: mode('gray.100', 'gray.800')(props),
-          borderRadius: '10px',
-          padding: '0.3rem 0.5rem',
+          padding: '0.2rem 1rem',
+          fontWeight: 'normal',
+          textTransform: 'capitalize',
+          rounded: 'full',
+          backgroundColor: 'transparent',
+          border: '1px solid lightgray',
         }),
       },
     },
@@ -72,32 +50,51 @@ const theme = extendTheme({
       variants: {
         primary: (props: any) => ({
           rounded: 'full',
-          color: mode('pink', 'gray.800')(props),
-          backgroundColor: mode('gray.600', 'brand.100')(props),
-
+          color: mode('white', 'gray.800')(props),
+          border: '1px solid',
+          backgroundColor: mode('black', 'white')(props),
+          borderColor: 'black',
+          transition: 'all .3s ease',
           _hover: {
-            backgroundColor: mode('brand.300', 'brand.50')(props),
+            color: mode('black', 'gray.800')(props),
+            backgroundColor: mode('accent.50', 'accent.50')(props),
+            borderColor: 'accent.50',
           },
 
           _active: {
-            backgroundColor: mode('brand.300', 'brand.50')(props),
+            backgroundColor: mode('accent.50', 'accent.50')(props),
           },
         }),
         secondary: (props: any) => ({
-          rounded: 'md',
-
-          color: mode('brand.200', 'brand.100')(props),
+          rounded: 'full',
+          color: mode('black', 'brand.100')(props),
           backgroundColor: 'transparent',
-          border: '2px solid',
-
+          border: '1px solid',
+          borderColor: mode('black', 'white')(props),
+          transition: 'all .3s ease',
           _hover: {
-            color: mode('white', 'gray.800')(props),
-            backgroundColor: mode('brand.200', 'brand.100')(props),
-            borderColor: mode('brand.200', 'brand.100')(props),
+            color: mode('accent.50', 'accent.50')(props),
+            borderColor: mode('accent.50', 'accent.50')(props),
           },
 
           _active: {
-            color: mode('brand.300', 'brand.50')(props),
+            color: mode('accent.50', 'accent.50')(props),
+          },
+        }),
+        tertiary: (props: any) => ({
+          fontSize: 'sm',
+          rounded: 'full',
+          color: mode('black', 'white')(props),
+          backgroundColor: mode('brand.100', 'gray.700')(props),
+          transition: 'all .3s ease',
+          _hover: {
+            color: mode('black', 'black')(props),
+            backgroundColor: 'accent.50',
+          },
+
+          _active: {
+            color: mode('black', 'black')(props),
+            backgroundColor: 'accent.50',
           },
         }),
       },

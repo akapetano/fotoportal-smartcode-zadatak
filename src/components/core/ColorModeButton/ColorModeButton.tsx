@@ -9,15 +9,16 @@ import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 export const ColorModeButton = ({ ...restProps }: IconButtonProps) => {
   const { toggleColorMode } = useColorMode();
   const SwitchIcon = useColorModeValue(SunIcon, MoonIcon);
+  const iconHoverColor = useColorModeValue('white', 'gray.700');
 
   return (
     <IconButton
-      variant="primary"
       size="md"
       rounded="full"
       onClick={toggleColorMode}
+      bg="none"
+      _hover={{ bg: '#F68B1E', color: iconHoverColor }}
       icon={<SwitchIcon />}
-      _hover={{ bg: '#F68B1E' }}
       {...restProps}
     />
   );

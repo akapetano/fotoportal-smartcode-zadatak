@@ -1,7 +1,9 @@
-import { IconButton, Box } from '@chakra-ui/react';
+import { IconButton, Box, useColorModeValue } from '@chakra-ui/react';
 import { MdShoppingCart, MdOutlineShoppingCart } from 'react-icons/md';
 
 export const CartButton = () => {
+  const iconHoverColor = useColorModeValue('white', 'gray.700');
+
   return (
     <IconButton
       css={{
@@ -11,10 +13,10 @@ export const CartButton = () => {
       rounded="full"
       p="0.5rem"
       bg="none"
-      _hover={{ bg: '#F68B1E' }}
+      _hover={{ bg: '#F68B1E', color: iconHoverColor }}
       icon={
         <>
-          <MdOutlineShoppingCart fontSize={24} />
+          <MdShoppingCart fontSize={24} />
           <Box
             as={'span'}
             color={'white'}
