@@ -1,11 +1,11 @@
 import { VStack, StackProps, Heading, Text } from '@chakra-ui/react';
 
-interface IPhotoInfoProps extends StackProps {
+interface IPhotoInfoBlockProps extends StackProps {
   heading: string;
   text: string;
 }
 
-export const PhotoInfo = ({ heading, text }: IPhotoInfoProps) => {
+export const PhotoInfoBlock = ({ heading, text }: IPhotoInfoBlockProps) => {
   return (
     <VStack alignItems="left">
       <Heading as="h3" fontSize="sm" textTransform="uppercase">

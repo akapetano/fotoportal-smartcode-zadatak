@@ -1,6 +1,5 @@
-import { Container, Heading } from '@chakra-ui/react';
 import type { NextPage } from 'next';
-import Head from 'next/head';
+import { NextHead } from '../src/components/shared/NextHead/NextHead';
 import { SearchBar } from '../src/components/core/SearchBar/SeachBar';
 import { PhotoDetails } from '../src/components/features/PhotoDetails/PhotoDetails';
 import { PhotoOverview } from '../src/components/features/PhotoOverview/PhotoOverview';
@@ -11,23 +10,16 @@ import { LayoutMain } from '../src/components/shared/LayoutMain/LayoutMain';
 const Home: NextPage = () => {
   return (
     <Layout>
-      <Head>
-        <title>FotoPortal</title>
-        <meta
-          name="description"
-          content="FotoPortal - web portal za fotografije"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
+      <NextHead
+        title="FotoPortal"
+        description="FotoPortal - web portal za fotografije"
+      />
       <LayoutMain>
         <SearchBar />
         <PhotoOverview />
         <PhotoDetails />
         <PhotoGallery />
       </LayoutMain>
-
-      <footer></footer>
     </Layout>
   );
 };
