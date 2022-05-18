@@ -1,0 +1,14 @@
+{
+  "navItems": {
+    "home": "Home",
+    "navItem": "Navigation"
+  },
+  "searchBarPlaceholder": "Search agency offers",
+  "aboutUs": {
+    "aboutUs": "About us",
+    "fotoportal": "FotoPortal",
+    "ourServices": "Our services",
+    "contacts": "Contacts"
+  },
+  "signInButton": "Sign In"
+}

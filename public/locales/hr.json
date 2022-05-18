@@ -1,0 +1,11 @@
+{
+  "navItems": { "homepage": "Naslovnica", "navItem": "Navigacija" },
+  "searchBarPlaceholder": "Pretraži ponudu agencija",
+  "aboutUs": {
+    "aboutUs": "O nama",
+    "fotoportal": "FotoPortal",
+    "ourServices": "Naše usluge",
+    "contacts": "Kontakti"
+  },
+  "signInButton": "Prijavi se"
+}

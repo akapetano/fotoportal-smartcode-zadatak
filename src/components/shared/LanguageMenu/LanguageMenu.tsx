@@ -4,7 +4,7 @@ import {
   MenuButton,
   MenuItem,
   MenuList,
-  IconButton,
+  Button,
   Flex,
   HStack,
   Text,
@@ -12,68 +12,65 @@ import {
 } from '@chakra-ui/react';
 import { ChevronDownIcon } from '@chakra-ui/icons';
 import NextLink from 'next/link';
+import { useTranslation } from 'react-i18next';
+import { LanguageMenuFlag } from '../../core/LanguageMenuFlag/LanguageMenuFlag';
 
 export const LanguageMenu = () => {
-  const { locale, locales, defaultLocale, asPath } = useRouter();
+  const { locale, asPath } = useRouter();
+  const { i18n } = useTranslation();
+  console.log(i18n.language);
 
   return (
     <Flex justifyContent="center" alignItems="center">
       <Menu>
-        <Box
-          w={8}
-          h={8}
-          rounded="full"
-          backgroundImage="url(./images/hr-flag.svg)"
-          backgroundPosition="center"
-          backgroundSize="cover"
-        />
-        <MenuButton
-          h="2.5rem"
-          w="2.5rem"
-          as={IconButton}
-          bg="transparent"
-          transition="all 0.2s"
-          rounded="full"
-          borderWidth="1px"
-          border="none"
-          icon={<ChevronDownIcon />}
-          _hover={{ bg: 'none' }}
-          _active={{ bg: 'none' }}
-          _focus={{ outline: 'none' }}
-        />
-        <MenuList>
-          <NextLink href={asPath} locale={locale}>
-            <MenuItem bg={locale === 'hr-HR' ? '#F68B1E' : ''}>
-              <HStack>
-                <Box
-                  w={8}
-                  h={8}
-                  rounded="full"
-                  backgroundImage="url(./images/hr-flag.svg)"
-                  backgroundPosition="center"
-                  backgroundSize="cover"
+        {({ isOpen }) => (
+          <>
+            <MenuButton
+              as={Button}
+              bg="transparent"
+              rounded="full"
+              borderWidth="1px"
+              border="none"
+              rightIcon={
+                <ChevronDownIcon
+                  style={{
+                    transform: isOpen ? 'rotate(180deg)' : 'none',
+                    transition: 'transform .2s',
+                  }}
                 />
-                <Text>HR</Text>
-              </HStack>
-            </MenuItem>
-          </NextLink>
-          <NextLink href={asPath} locale={locale}>
-            <MenuItem bg={locale === 'en-US' ? '#F68B1E' : ''}>
-              <HStack>
-                <Box
-                  bg="pink"
-                  w={8}
-                  h={8}
-                  rounded="full"
-                  backgroundImage="url(./images/uk-flag.svg)"
-                  backgroundPosition="center"
-                  backgroundSize="cover"
-                />
-                <Text>EN</Text>
-              </HStack>
-            </MenuItem>
-          </NextLink>
-        </MenuList>
+              }
+              _hover={{ bg: 'none' }}
+              _active={{ bg: 'none' }}
+              _focus={{ outline: 'none' }}
+            >
+              <LanguageMenuFlag language={i18n.language} />
+            </MenuButton>
+            <MenuList>
+              <NextLink href={asPath} locale="hr-HR">
+                <MenuItem
+                  as={HStack}
+                  bg={locale === 'hr-HR' ? '#F68B1E' : ''}
+                  _hover={{ cursor: 'pointer' }}
+                  onClick={() => i18n.changeLanguage('hr-HR')}
+                >
+                  <LanguageMenuFlag language="hr-HR" />
+                  <Text>HR</Text>
+                </MenuItem>
+              </NextLink>
+              <NextLink href={asPath} locale="en-US">
+                <MenuItem
+                  as={HStack}
+                  bg={locale === 'en-US' ? '#F68B1E' : ''}
+                  _hover={{ cursor: 'pointer' }}
+                  onClick={() => i18n.changeLanguage('en-US')}
+                >
+                  <LanguageMenuFlag language="en-US" />
+                  <Text>EN</Text>
+                </MenuItem>
+              </NextLink>
+            </MenuList>
+          </>
+        )}
       </Menu>
     </Flex>
   );
