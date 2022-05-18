@@ -4,7 +4,7 @@ import { ColorModeButton } from '../../core/ColorModeButton/ColorModeButton';
 import { Logo } from '../../core/Logo/Logo';
 import { NavbarItems } from '../../core/NavBarItems/NavBarItems';
 import { NavbarWrapper } from '../../core/NavbarWrapper/NavbarWrapper';
-import { LanguageMenu } from '../../core/LanguageMenu/LanguageMenu';
+import { LanguageMenu } from '../LanguageMenu/LanguageMenu';
 import { AboutUsMenu } from '../../core/AboutUsMenu/AboutUsMenu';
 import { SignInButton } from '../../core/SignInButton/SignInButton';
 

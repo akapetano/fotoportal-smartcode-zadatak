@@ -15,10 +15,10 @@
     "@emotion/styled": "^11.8.1",
     "framer-motion": "^6.3.3",
     "i18next": "^21.8.2",
+    "i18next-browser-languagedetector": "^6.1.4",
     "next": "12.1.6",
     "react": "18.1.0",
     "react-dom": "18.1.0",
-    "react-flag-kit": "^1.1.1",
     "react-i18next": "^11.16.9",
     "react-icons": "^4.3.1"
   },

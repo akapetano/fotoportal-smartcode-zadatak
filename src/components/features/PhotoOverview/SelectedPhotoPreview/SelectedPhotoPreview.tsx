@@ -20,6 +20,7 @@ export const SelectedPhotoPreview = ({ ...restProps }: FlexProps) => {
           src="/images/norbert-velescu-web-unsplash.jpg"
           alt="Spider web"
           layout="fill"
+          priority
         />
       </Box>
     </Flex>
