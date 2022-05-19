@@ -1,7 +1,10 @@
 import { Button, ButtonGroup, Flex, VStack } from '@chakra-ui/react';
 import { ArrowDownIcon } from '@chakra-ui/icons';
+import { useTranslation } from 'react-i18next';
 
 export const ActionButtons = () => {
+  const { t } = useTranslation();
+
   return (
     <VStack>
       <VStack
@@ -19,7 +22,7 @@ export const ActionButtons = () => {
           w={{ base: '60vw', md: '80%' }}
           leftIcon={<ArrowDownIcon />}
         >
-          Preuzmi sadržaj
+          {t('actionButtons.downloadContent')}
         </Button>
         <ButtonGroup
           w={{ base: '60vw', md: '100%' }}
@@ -32,14 +35,14 @@ export const ActionButtons = () => {
             fontWeight="normal"
             w={{ base: '50vw', md: '39%' }}
           >
-            Pošalji u sustav
+            {t('actionButtons.sendToSystem')}
           </Button>
           <Button
             variant="tertiary"
             fontWeight="normal"
             w={{ base: '50vw', md: '39%' }}
           >
-            Pošalji u CMS
+            {t('actionButtons.sendToCMS')}
           </Button>
         </ButtonGroup>
       </VStack>
@@ -65,7 +68,7 @@ export const ActionButtons = () => {
             rounded="full"
             w={{ base: '60vw', md: '80%' }}
           >
-            Dodaj u košaricu
+            {t('actionButtons.addToCart')}
           </Button>
           <Button
             variant="secondary"
@@ -74,7 +77,7 @@ export const ActionButtons = () => {
             w={{ base: '60vw', md: '80%' }}
             leftIcon={<ArrowDownIcon />}
           >
-            Preuzmi pregledni primjerak
+            {t('actionButtons.downloadSample')}
           </Button>
         </VStack>
       </VStack>

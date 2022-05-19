@@ -7,5 +7,25 @@
     "ourServices": "Naše usluge",
     "contacts": "Kontakti"
   },
-  "signInButton": "Prijavi se"
+  "signInButton": "Prijavi se",
+  "howToUseContent": "Kako mogu koristiti ovaj sadržaj?",
+  "downloadWithAuthorSignature": "Preuzmi s potpisom autora",
+  "actionButtons": {
+    "downloadContent": "Preuzmi sadržaj",
+    "sendToSystem": "Pošalji u sustav",
+    "sendToCMS": "Pošalji u CMS",
+    "addToCart": "Dodaj u košaricu",
+    "downloadSample": "Preuzmi pregledni primjerak"
+  },
+  "photoDescription": {
+    "title": "Opis",
+    "text": "Davno je utvrđena činjenica da će čitatelja odvratiti čitljiv sadržaj stranice kad se pogleda njezin izgled. Cilj korištenje Lorem Ipsuma je da ima više-manje normalnu distribuciju slova, za razliku od korištenja 'Sadržaj ovdje, sadržaj ovdje', čineći da izgleda kao čitljiv engleski. Mnogi paketi za stolno izdavaštvo i urednici web stranica sada koriste Lorem Ipsum kao zadani tekst modela, i upisom u pretraživač 'lorem ipsum' otkrit će mnoge web stranice još u povojima. Tijekom godina razvijale su se različite verzije, ponekad slučajno, ponekad namjerno (unoseći malo humora i slično)."
+  },
+  "photoKeywords": "Ključne riječi",
+  "annotations": {
+    "title": "Posebne napomene",
+    "annotation1": "Lorem Ipsum standardni je lažni test u industriji još od 1500-ih.",
+    "annotation2": "Lorem Ipsum standardni je lažni test u industriji još od 1500-ih, kad je nepoznati tiskar uzeo tiskarske okvire i premetnuo ih kako bi napravio ispis uzoraka knjiga. Preživio je ne samo pet stoljeća, već i skok u elektronički oblik slova, ostavši u biti nepromijenjen.",
+    "annotation3": "Preživio je ne samo pet stoljeća, već i skok u elektronički oblik slova."
+  }
 }

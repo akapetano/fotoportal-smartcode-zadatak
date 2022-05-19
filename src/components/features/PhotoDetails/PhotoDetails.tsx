@@ -2,8 +2,11 @@ import { Flex, Stack } from '@chakra-ui/react';
 import { PhotoDescription } from './PhotoDescription/PhotoDescription';
 import { PhotoKeywords } from './PhotoKeywords/PhotoKeywords';
 import { PhotoInfoBlock } from './PhotoInfoBlock/PhotoInfoBlock';
+import { useTranslation } from 'react-i18next';
 
 export const PhotoDetails = () => {
+  const { t } = useTranslation();
+
   return (
     <Flex>
       <Flex p="3rem 2rem" w="70vw" flexDirection="column">
@@ -17,16 +20,16 @@ export const PhotoDetails = () => {
       </Flex>
       <Stack p="0 0 3rem 3rem" w="30vw" flexDirection="column" spacing="1.5rem">
         <PhotoInfoBlock
-          heading="Posebne napomene"
-          text="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+          heading={t('annotations.title')}
+          text={t('annotations.annotation1')}
         />
         <PhotoInfoBlock
-          heading="Posebne napomene"
-          text="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+          heading={t('annotations.title')}
+          text={t('annotations.annotation2')}
         />
         <PhotoInfoBlock
-          heading="Posebne napomene"
-          text="It has survived not only five centuries, but also the leap into electronic typesetting."
+          heading={t('annotations.title')}
+          text={t('annotations.annotation3')}
         />
       </Stack>
     </Flex>

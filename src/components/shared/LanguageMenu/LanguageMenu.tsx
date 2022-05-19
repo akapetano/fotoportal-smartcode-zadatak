@@ -49,8 +49,7 @@ export const LanguageMenu = () => {
               <NextLink href={asPath} locale={Locale.Hr}>
                 <MenuItem
                   as={HStack}
-                  bg={Locale.Hr ? '#F68B1E' : ''}
-                  _hover={{ cursor: 'pointer' }}
+                  _hover={{ cursor: 'pointer', bg: '#F68B1E' }}
                   onClick={() => i18n.changeLanguage('hr-HR')}
                 >
                   <LanguageMenuFlag language="hr-HR" />
@@ -60,8 +59,7 @@ export const LanguageMenu = () => {
               <NextLink href={asPath} locale={Locale.En}>
                 <MenuItem
                   as={HStack}
-                  bg={Locale.En ? '#F68B1E' : ''}
-                  _hover={{ cursor: 'pointer' }}
+                  _hover={{ cursor: 'pointer', bg: '#F68B1E' }}
                   onClick={() => i18n.changeLanguage('en-US')}
                 >
                   <LanguageMenuFlag language="en-US" />

@@ -10,7 +10,7 @@ import { SignInButton } from '../../core/SignInButton/SignInButton';
 
 import { CartButton } from '../../core/CartButton/CartButton';
 
-export const Navbar = () => {
+export const Nav = () => {
   return (
     <NavbarWrapper>
       <Container maxWidth="container.xl">

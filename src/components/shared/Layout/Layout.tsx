@@ -1,11 +1,11 @@
 import { Box, BoxProps } from '@chakra-ui/react';
 import { Footer } from '../Footer/Footer';
-import { Navbar } from '../Navbar/Navbar';
+import { Nav } from '../Nav/Nav';
 
 export const Layout = ({ children, ...restProps }: BoxProps) => {
   return (
     <Box h="100vh">
-      <Navbar />
+      <Nav />
       {children}
       <Footer />
     </Box>

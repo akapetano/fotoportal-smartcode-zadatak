@@ -11,8 +11,11 @@ import {
 import { InfoIcon } from '@chakra-ui/icons';
 import { PhotoSizeAndPrice } from './PhotoSizeAndPrice/PhotoSizeAndPrice';
 import { ActionButtons } from './ActionButtons/ActionButtons';
+import { useTranslation } from 'react-i18next';
 
 export const PhotoActions = ({ ...restProps }: FlexProps) => {
+  const { t } = useTranslation();
+
   return (
     <Flex
       h="600px"
@@ -34,7 +37,7 @@ export const PhotoActions = ({ ...restProps }: FlexProps) => {
           textAlign={{ base: 'center', md: 'left' }}
           p={{ base: '0.5rem 1rem 0 0', md: '0 0.5rem 0 1.5rem' }}
         >
-          Kako mogu koristiti ovaj sadržaj?
+          {t('howToUseContent')}
         </Text>
         <Icon as={InfoIcon} />
       </Flex>
@@ -43,9 +46,9 @@ export const PhotoActions = ({ ...restProps }: FlexProps) => {
         <Checkbox
           colorScheme="orange"
           size="sm"
-          p={{ base: '1rem 0 0 0 ', md: '0.5rem 6.5rem 0 0' }}
+          p={{ base: '1rem 0 0 0 ', md: '0.5rem 6.5rem 0 2rem' }}
         >
-          Preuzmi s potpisom autora
+          {t('downloadWithAuthorSignature')}
         </Checkbox>
       </Flex>
       <ActionButtons />
