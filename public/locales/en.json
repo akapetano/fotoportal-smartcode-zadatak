@@ -1,7 +1,7 @@
 {
   "navItems": {
     "home": "Home",
-    "navItem": "Navigation"
+    "navigation": "Navigation"
   },
   "searchBarPlaceholder": "Search agency offers",
   "aboutUs": {

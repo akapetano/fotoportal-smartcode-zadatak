@@ -4,7 +4,11 @@ import { SelectedPhotoPreview } from './SelectedPhotoPreview/SelectedPhotoPrevie
 
 export const PhotoOverview = () => {
   return (
-    <Flex>
+    <Flex
+      flexDirection={{ base: 'column', md: 'row' }}
+      alignItems="center"
+      justifyContent="center"
+    >
       <SelectedPhotoPreview w="70vw" />
       <PhotoActions w="30vw" />
     </Flex>

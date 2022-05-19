@@ -1,5 +1,5 @@
 {
-  "navItems": { "homepage": "Naslovnica", "navItem": "Navigacija" },
+  "navItems": { "home": "Naslovnica", "navigation": "Navigacija" },
   "searchBarPlaceholder": "Pretraži ponudu agencija",
   "aboutUs": {
     "aboutUs": "O nama",

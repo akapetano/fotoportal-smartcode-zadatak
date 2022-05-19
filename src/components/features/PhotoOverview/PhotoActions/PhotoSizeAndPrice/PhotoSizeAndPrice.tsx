@@ -12,7 +12,12 @@ export const PhotoSizeAndPrice = () => {
   const borderColor = useColorModeValue('lightgray', 'gray.700');
 
   return (
-    <Box border="1px solid" borderColor={borderColor} w="80%" rounded="lg">
+    <Box
+      border="1px solid"
+      borderColor={borderColor}
+      w={{ base: '60vw', md: '80%' }}
+      rounded="lg"
+    >
       <Flex alignItems="center" p="1rem">
         <Text fontWeight="bold">IMAGE 001</Text>
       </Flex>

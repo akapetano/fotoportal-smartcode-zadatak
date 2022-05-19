@@ -18,7 +18,6 @@ const theme = extendTheme({
     },
     accent: {
       50: '#F68B1E',
-      100: '#F52489',
     },
   },
   fonts: {

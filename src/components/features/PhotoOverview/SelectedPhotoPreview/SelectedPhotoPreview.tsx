@@ -12,14 +12,23 @@ export const SelectedPhotoPreview = ({ ...restProps }: FlexProps) => {
       h="600px"
       bg={selectedPhotoPreviewBackground}
       justifyContent="center"
+      alignItems="center"
       p="2rem"
       {...restProps}
     >
-      <Box position="relative" height="527px" width="448px">
+      <Box
+        // position={{ sm: 'absolute', md: 'relative' }}
+        justifyContent="center"
+        alignItems="center"
+        height="100%"
+        width="448px"
+      >
         <Image
           src="/images/norbert-velescu-web-unsplash.jpg"
           alt="Spider web"
-          layout="fill"
+          layout="responsive"
+          height="522px"
+          width="448px"
           priority
         />
       </Box>

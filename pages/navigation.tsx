@@ -6,7 +6,7 @@ import { Layout } from '../src/components/shared/Layout/Layout';
 import { LayoutMain } from '../src/components/shared/LayoutMain/LayoutMain';
 
 const Navigation: NextPage = () => {
-  const constructionColor = useColorModeValue('brand.100', 'brand.50');
+  const constructionColor = useColorModeValue('brand.200', 'accent.50');
 
   return (
     <Layout>
