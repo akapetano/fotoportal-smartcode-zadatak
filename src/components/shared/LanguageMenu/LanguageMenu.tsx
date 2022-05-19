@@ -14,11 +14,11 @@ import { ChevronDownIcon } from '@chakra-ui/icons';
 import NextLink from 'next/link';
 import { useTranslation } from 'react-i18next';
 import { LanguageMenuFlag } from '../../core/LanguageMenuFlag/LanguageMenuFlag';
+import { Locale } from '../../../enums/locale';
 
 export const LanguageMenu = () => {
-  const { locale, asPath } = useRouter();
+  const { asPath } = useRouter();
   const { i18n } = useTranslation();
-  console.log(i18n.language);
 
   return (
     <Flex justifyContent="center" alignItems="center">
@@ -46,10 +46,10 @@ export const LanguageMenu = () => {
               <LanguageMenuFlag language={i18n.language} />
             </MenuButton>
             <MenuList>
-              <NextLink href={asPath} locale="hr-HR">
+              <NextLink href={asPath} locale={Locale.Hr}>
                 <MenuItem
                   as={HStack}
-                  bg={locale === 'hr-HR' ? '#F68B1E' : ''}
+                  bg={Locale.Hr ? '#F68B1E' : ''}
                   _hover={{ cursor: 'pointer' }}
                   onClick={() => i18n.changeLanguage('hr-HR')}
                 >
@@ -57,10 +57,10 @@ export const LanguageMenu = () => {
                   <Text>HR</Text>
                 </MenuItem>
               </NextLink>
-              <NextLink href={asPath} locale="en-US">
+              <NextLink href={asPath} locale={Locale.En}>
                 <MenuItem
                   as={HStack}
-                  bg={locale === 'en-US' ? '#F68B1E' : ''}
+                  bg={Locale.En ? '#F68B1E' : ''}
                   _hover={{ cursor: 'pointer' }}
                   onClick={() => i18n.changeLanguage('en-US')}
                 >
