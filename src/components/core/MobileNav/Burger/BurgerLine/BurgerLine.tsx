@@ -1,10 +1,10 @@
 import { Box, useColorModeValue } from '@chakra-ui/react';
 
 interface IBurgerLine {
-  isOpen: boolean;
+  isopen: boolean;
 }
 
-export const BurgerLine = ({ isOpen }: IBurgerLine) => {
+export const BurgerLine = ({ isopen }: IBurgerLine) => {
   const lineColor = useColorModeValue('gray.900', 'gray.100');
 
   return (
@@ -16,12 +16,12 @@ export const BurgerLine = ({ isOpen }: IBurgerLine) => {
       transition="all 0.3s ease-in-out"
       position="relative"
       transformOrigin="1px"
-      _first={{ transform: isOpen ? 'rotate(45deg)' : 'rotate(0)' }}
+      _first={{ transform: isopen ? 'rotate(45deg)' : 'rotate(0)' }}
       _even={{
-        opacity: isOpen ? '0' : '1',
-        transform: isOpen ? 'translateX(20px)' : 'translateX(0)',
+        opacity: isopen ? '0' : '1',
+        transform: isopen ? 'translateX(20px)' : 'translateX(0)',
       }}
-      _last={{ transform: isOpen ? 'rotate(-45deg)' : 'rotate(0)' }}
+      _last={{ transform: isopen ? 'rotate(-45deg)' : 'rotate(0)' }}
     />
   );
 };

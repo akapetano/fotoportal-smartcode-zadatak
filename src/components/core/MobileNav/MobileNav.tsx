@@ -8,8 +8,8 @@ export const MobileNav = ({ ...restProps }: FlexProps) => {
 
   return (
     <Flex {...restProps}>
-      <Burger isOpen={isOpen} setIsOpen={setIsOpen} />
-      <MobileMenu isOpen={isOpen} />
+      <Burger isopen={isOpen} setIsOpen={setIsOpen} />
+      <MobileMenu isopen={isOpen} />
     </Flex>
   );
 };

@@ -13,10 +13,10 @@ import { NavLinks } from '../../Nav/NavLinks/NavLinks';
 import { SignInButton } from '../../SignInButton/SignInButton';
 
 interface IMobileMenuProps extends FlexProps {
-  isOpen: boolean;
+  isopen: boolean;
 }
 
-export const MobileMenu = ({ isOpen }: IMobileMenuProps) => {
+export const MobileMenu = ({ isopen }: IMobileMenuProps) => {
   const overlayBgColor = useColorModeValue(
     'rgba(255,255,255,0.45)',
     'rgba(0,0,0,0.55)'
@@ -35,7 +35,7 @@ export const MobileMenu = ({ isOpen }: IMobileMenuProps) => {
       position="fixed"
       top="0"
       right="0"
-      transform={isOpen ? 'translateX(0)' : 'translateX(100%)'}
+      transform={isopen ? 'translateX(0)' : 'translateX(100%)'}
       transition="transform 0.3s ease-in-out"
       zIndex="20"
     >

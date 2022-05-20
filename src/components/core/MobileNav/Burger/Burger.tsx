@@ -2,15 +2,15 @@ import { Button, ButtonProps } from '@chakra-ui/react';
 import { BurgerLine } from './BurgerLine/BurgerLine';
 
 interface IBurgerProps extends ButtonProps {
-  isOpen: boolean;
+  isopen: boolean;
   setIsOpen: (param: boolean) => void;
 }
 
-export const Burger = ({ isOpen, setIsOpen, ...restProps }: IBurgerProps) => {
+export const Burger = ({ isopen, setIsOpen, ...restProps }: IBurgerProps) => {
   return (
     <Button
-      isOpen={isOpen}
-      onClick={() => setIsOpen(!isOpen)}
+      isopen={isopen}
+      onClick={() => setIsOpen(!isopen)}
       position="fixed"
       top="1rem"
       right="1rem"
@@ -29,9 +29,9 @@ export const Burger = ({ isOpen, setIsOpen, ...restProps }: IBurgerProps) => {
       _focus={{ outline: 'none' }}
       {...restProps}
     >
-      <BurgerLine isOpen={isOpen} />
-      <BurgerLine isOpen={isOpen} />
-      <BurgerLine isOpen={isOpen} />
+      <BurgerLine isopen={isopen} />
+      <BurgerLine isopen={isopen} />
+      <BurgerLine isopen={isopen} />
     </Button>
   );
 };
