@@ -6,11 +6,11 @@ export const PhotoOverview = () => {
   return (
     <Flex
       flexDirection={{ base: 'column', md: 'row' }}
-      alignItems="center"
+      alignItems={{ base: 'center', md: 'start' }}
       justifyContent="center"
     >
-      <SelectedPhotoPreview w="70vw" />
-      <PhotoActions w="30vw" />
+      <SelectedPhotoPreview w={{ base: '80vw', md: '70vw' }} />
+      <PhotoActions w={{ base: '80vw', md: '30vw' }} />
     </Flex>
   );
 };

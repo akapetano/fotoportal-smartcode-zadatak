@@ -1,12 +1,12 @@
-import { Button, ButtonGroup, Flex, VStack } from '@chakra-ui/react';
+import { Button, ButtonGroup, StackProps, VStack } from '@chakra-ui/react';
 import { ArrowDownIcon } from '@chakra-ui/icons';
 import { useTranslation } from 'react-i18next';
 
-export const ActionButtons = () => {
+export const ActionButtons = ({ ...restProps }: StackProps) => {
   const { t } = useTranslation();
 
   return (
-    <VStack>
+    <VStack {...restProps}>
       <VStack
         w="100%"
         display="flex"

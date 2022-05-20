@@ -15,11 +15,9 @@ export const SelectedPhotoPreview = ({ ...restProps }: FlexProps) => {
   return (
     <Flex
       height={{ base: '40vh', md: '66vh' }}
-      width="80%"
       bg={selectedPhotoPreviewBackground}
       justifyContent="center"
       alignItems="center"
-      p="1rem"
       position="relative"
       {...restProps}
     >

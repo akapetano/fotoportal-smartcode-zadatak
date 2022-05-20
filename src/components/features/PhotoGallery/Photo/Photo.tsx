@@ -9,7 +9,7 @@ interface IPhotoProps extends GridItemProps {
 export const Photo = ({ src, alt }: IPhotoProps) => {
   return (
     <GridItem w="100%" h="347" position="relative">
-      <Image src={src} layout="fill" objectFit="fill" priority alt={alt} />
+      <Image src={src} layout="fill" objectFit="cover" priority alt={alt} />
     </GridItem>
   );
 };

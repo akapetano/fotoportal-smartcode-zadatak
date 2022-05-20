@@ -2,16 +2,12 @@ import { Link as ChakraLink, LinkProps } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
 
-interface INavbarItemProps extends LinkProps {
+interface INavLinkProps extends LinkProps {
   to: string;
   linkName: string;
 }
 
-export const NavbarItem = ({
-  to,
-  linkName,
-  ...restProps
-}: INavbarItemProps) => {
+export const NavLink = ({ to, linkName, ...restProps }: INavLinkProps) => {
   const router = useRouter();
   const isActive = router.pathname === to;
 

@@ -1,16 +1,18 @@
-import { HStack, Flex, Container } from '@chakra-ui/react';
-import { VerticalDivider } from '../../core/VerticalDivider/VerticalDivider';
-import { ColorModeButton } from '../../core/ColorModeButton/ColorModeButton';
-import { Logo } from '../../core/Logo/Logo';
-import { NavbarItems } from '../../core/NavBarItems/NavBarItems';
-import { NavbarWrapper } from '../../core/NavbarWrapper/NavbarWrapper';
-import { LanguageMenu } from '../LanguageMenu/LanguageMenu';
-import { AboutUsMenu } from '../../core/AboutUsMenu/AboutUsMenu';
-import { SignInButton } from '../../core/SignInButton/SignInButton';
-
-import { CartButton } from '../../core/CartButton/CartButton';
+import { HStack, Flex, Container, useDisclosure } from '@chakra-ui/react';
+import { VerticalDivider } from '../VerticalDivider/VerticalDivider';
+import { ColorModeButton } from '../ColorModeButton/ColorModeButton';
+import { Logo } from '../Logo/Logo';
+import { NavLinks } from './NavLinks/NavLinks';
+import { NavbarWrapper } from './NavbarWrapper/NavbarWrapper';
+import { LanguageMenu } from '../../shared/LanguageMenu/LanguageMenu';
+import { AboutUsMenu } from '../AboutUsMenu/AboutUsMenu';
+import { SignInButton } from '../SignInButton/SignInButton';
+import { CartButton } from '../CartButton/CartButton';
+import { MobileNav } from '../MobileNav/MobileNav';
 
 export const Nav = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
     <NavbarWrapper>
       <Container maxWidth="container.xl">
@@ -21,8 +23,8 @@ export const Nav = () => {
           <Logo />
           <VerticalDivider display={{ base: 'none', md: 'flex' }} />
           <HStack spacing={{ base: 16, md: 32 }}>
-            <NavbarItems
-              direction={{ base: 'column', md: 'row' }}
+            <NavLinks
+              direction="row"
               display={{ base: 'none', md: 'none', lg: 'none', xl: 'flex' }}
             />
             <HStack display={{ base: 'none', md: 'flex' }}>
@@ -34,7 +36,7 @@ export const Nav = () => {
               <SignInButton />
             </HStack>
           </HStack>
-          <HStack display={{ base: 'flex', md: 'none' }}></HStack>
+          <MobileNav display={{ base: 'flex', md: 'none' }} />
         </Flex>
       </Container>
     </NavbarWrapper>

@@ -1,7 +1,7 @@
-import { Button } from '@chakra-ui/react';
+import { Button, ButtonProps } from '@chakra-ui/react';
 import { useTranslation } from 'react-i18next';
 
-export const SignInButton = () => {
+export const SignInButton = ({ ...restProps }: ButtonProps) => {
   const { t } = useTranslation();
 
   return (
@@ -11,6 +11,7 @@ export const SignInButton = () => {
       rounded="full"
       fontSize="xs"
       fontWeight="400"
+      {...restProps}
     >
       {t('signInButton')}
     </Button>

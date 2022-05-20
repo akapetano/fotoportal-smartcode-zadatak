@@ -3,8 +3,6 @@ import {
   Text,
   Checkbox,
   Icon,
-  HStack,
-  Box,
   Divider,
   FlexProps,
 } from '@chakra-ui/react';
@@ -25,7 +23,8 @@ export const PhotoActions = ({ ...restProps }: FlexProps) => {
       {...restProps}
     >
       <Divider
-        mb={{ base: '0', md: '1rem' }}
+        mb={{ base: '0', md: '2rem' }}
+        mt={{ base: '2rem', md: '0' }}
         alignSelf={{ base: 'center', md: 'stretch' }}
         justifySelf={{ base: 'center', md: 'stretch' }}
         width={{ base: '80vw', md: 'auto' }}
@@ -56,9 +55,9 @@ export const PhotoActions = ({ ...restProps }: FlexProps) => {
           {t('downloadWithAuthorSignature')}
         </Checkbox>
       </Flex>
-      <ActionButtons />
+      <ActionButtons mb="1rem" />
       <Divider
-        mt="2rem"
+        mt={{ base: '1rem', md: '2rem' }}
         alignSelf="center"
         justifySelf="center"
         width={{ base: '80vw', md: '80%' }}
