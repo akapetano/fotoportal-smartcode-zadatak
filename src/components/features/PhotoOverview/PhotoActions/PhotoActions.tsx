@@ -31,14 +31,15 @@ export const PhotoActions = ({ ...restProps }: FlexProps) => {
       />
       <Flex
         alignItems="center"
+        justifyContent={{ base: 'center', md: 'start' }}
         pl={{ base: '0', md: '1rem' }}
         pb="1rem"
-        w={{ base: '40vw', md: 'auto' }}
+        mt={{ base: '1rem', md: '0' }}
       >
         <Text
           fontSize="sm"
           textAlign={{ base: 'center', md: 'left' }}
-          p={{ base: '0.5rem 1rem 0 0', md: '0 0.5rem 0 1.5rem' }}
+          p={{ base: '0 0.5rem', md: '0 0.5rem 0 1.5rem' }}
         >
           {t('howToUseContent')}
         </Text>
