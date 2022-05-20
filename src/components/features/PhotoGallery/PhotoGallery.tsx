@@ -8,6 +8,7 @@ import {
 import { ChevronRightIcon } from '@chakra-ui/icons';
 import { PhotoGalleryGrid } from './PhotoGalleryGrid/PhotoGalleryGrid';
 import { useTranslation } from 'react-i18next';
+import { SRLWrapper } from 'simple-react-lightbox';
 
 export const PhotoGallery = () => {
   const photoGalleryBg = useColorModeValue('#E5E5E5', 'gray.700');

@@ -1,5 +1,4 @@
-import { Grid, GridItem } from '@chakra-ui/react';
-import Image from 'next/image';
+import { Grid } from '@chakra-ui/react';
 import { Photo } from '../Photo/Photo';
 
 export const PhotoGalleryGrid = () => {
