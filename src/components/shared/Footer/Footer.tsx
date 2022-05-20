@@ -1,8 +1,10 @@
 import { Box, Flex, Link, Text, useColorModeValue } from '@chakra-ui/react';
 import Image from 'next/image';
+import { useTranslation } from 'react-i18next';
 
 export const Footer = () => {
   const footerBorderColor = useColorModeValue('gray.100', 'gray.700');
+  const { t } = useTranslation();
   const smartcode = '{smart code}';
 
   return (
@@ -17,7 +19,7 @@ export const Footer = () => {
       justifyContent="center"
     >
       <Text>
-        Design by{' '}
+        {t('footer.designBy')}{' '}
         <Link
           href="https://smartcode.eu/"
           target="_blank"
@@ -28,7 +30,7 @@ export const Footer = () => {
         </Link>
       </Text>
       <Text>
-        2022 | Built by{' '}
+        2022 | {t('footer.builtBy')}{' '}
         <Link
           href="https://www.andrijakapetanovic.com/"
           target="_blank"

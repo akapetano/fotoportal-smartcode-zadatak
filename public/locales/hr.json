@@ -27,5 +27,11 @@
     "annotation1": "Lorem Ipsum standardni je lažni test u industriji još od 1500-ih.",
     "annotation2": "Lorem Ipsum standardni je lažni test u industriji još od 1500-ih, kad je nepoznati tiskar uzeo tiskarske okvire i premetnuo ih kako bi napravio ispis uzoraka knjiga. Preživio je ne samo pet stoljeća, već i skok u elektronički oblik slova, ostavši u biti nepromijenjen.",
     "annotation3": "Preživio je ne samo pet stoljeća, već i skok u elektronički oblik slova."
+  },
+  "moreFromGallery": "Više iz galerije:",
+  "galleryShowMoreButton": "Prikaži više",
+  "footer": {
+    "designBy": "Dizajnirao",
+    "builtBy": "Izradio"
   }
 }

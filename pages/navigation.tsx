@@ -4,14 +4,16 @@ import { Flex, Icon, Heading, useColorModeValue } from '@chakra-ui/react';
 import { MdConstruction } from 'react-icons/md';
 import { Layout } from '../src/components/shared/Layout/Layout';
 import { LayoutMain } from '../src/components/shared/LayoutMain/LayoutMain';
+import { useTranslation } from 'react-i18next';
 
 const Navigation: NextPage = () => {
   const constructionColor = useColorModeValue('brand.200', 'accent.50');
+  const { t } = useTranslation();
 
   return (
     <Layout>
       <NextHead
-        title="FotoPortal | Navigacija"
+        title={`FotoPortal | ${t('navItems.navigation')}`}
         description="FotoPortal - web portal za fotografije"
       />
       <LayoutMain>
