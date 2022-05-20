@@ -9,7 +9,9 @@ export const PhotoDescription = () => {
       <Heading as="h3" fontSize="sm" textTransform="uppercase">
         {t('photoDescription.title')}
       </Heading>
-      <Text fontSize="sm">{t('photoDescription.text')}</Text>
+      <Text fontSize="sm" width={{ base: '80vw', md: 'auto' }}>
+        {t('photoDescription.text')}
+      </Text>
     </VStack>
   );
 };

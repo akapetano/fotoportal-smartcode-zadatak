@@ -15,7 +15,7 @@ export const PhotoSizeAndPrice = () => {
     <Box
       border="1px solid"
       borderColor={borderColor}
-      w={{ base: '60vw', md: '80%' }}
+      w={{ base: '80vw', md: '80%' }}
       rounded="lg"
     >
       <Flex alignItems="center" p="1rem">

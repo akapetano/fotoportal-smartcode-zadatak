@@ -4,7 +4,11 @@ import { Photo } from '../Photo/Photo';
 
 export const PhotoGalleryGrid = () => {
   return (
-    <Grid templateColumns="repeat(4, 2fr)" gap={2} mt="1rem">
+    <Grid
+      templateColumns={{ base: 'repeat(1, 2fr)', md: 'repeat(4, 2fr)' }}
+      gap={2}
+      mt="1rem"
+    >
       <Photo src="/images/snail-unsplash.jpg" alt="A photo of a snail" />
       <Photo
         src="/images/wolfgang-hasselmann-horses-unsplash.jpg"

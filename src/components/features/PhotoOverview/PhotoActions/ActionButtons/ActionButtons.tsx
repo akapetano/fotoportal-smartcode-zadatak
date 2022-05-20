@@ -19,13 +19,13 @@ export const ActionButtons = () => {
         <Button
           variant="tertiary"
           textTransform="uppercase"
-          w={{ base: '60vw', md: '80%' }}
+          w={{ base: '80vw', md: '80%' }}
           leftIcon={<ArrowDownIcon />}
         >
           {t('actionButtons.downloadContent')}
         </Button>
         <ButtonGroup
-          w={{ base: '60vw', md: '100%' }}
+          w={{ base: '80vw', md: '100%' }}
           display="flex"
           alignItems="center"
           justifyContent="center"
@@ -33,6 +33,7 @@ export const ActionButtons = () => {
           <Button
             variant="tertiary"
             fontWeight="normal"
+            fontSize={{ base: 'xs', md: 'sm' }}
             w={{ base: '50vw', md: '39%' }}
           >
             {t('actionButtons.sendToSystem')}
@@ -40,6 +41,7 @@ export const ActionButtons = () => {
           <Button
             variant="tertiary"
             fontWeight="normal"
+            fontSize={{ base: 'xs', md: 'sm' }}
             w={{ base: '50vw', md: '39%' }}
           >
             {t('actionButtons.sendToCMS')}
@@ -66,7 +68,7 @@ export const ActionButtons = () => {
             textTransform="uppercase"
             fontSize="sm"
             rounded="full"
-            w={{ base: '60vw', md: '80%' }}
+            w={{ base: '80vw', md: '80%' }}
           >
             {t('actionButtons.addToCart')}
           </Button>
@@ -74,7 +76,7 @@ export const ActionButtons = () => {
             variant="secondary"
             fontSize="sm"
             rounded="full"
-            w={{ base: '60vw', md: '80%' }}
+            w={{ base: '80vw', md: '80%' }}
             leftIcon={<ArrowDownIcon />}
           >
             {t('actionButtons.downloadSample')}

@@ -1,4 +1,9 @@
-import { Box, Flex, FlexProps, useColorModeValue } from '@chakra-ui/react';
+import {
+  Container,
+  Flex,
+  FlexProps,
+  useColorModeValue,
+} from '@chakra-ui/react';
 import Image from 'next/image';
 
 export const SelectedPhotoPreview = ({ ...restProps }: FlexProps) => {
@@ -9,29 +14,22 @@ export const SelectedPhotoPreview = ({ ...restProps }: FlexProps) => {
 
   return (
     <Flex
-      h="600px"
+      height={{ base: '40vh', md: '66vh' }}
+      width="80%"
       bg={selectedPhotoPreviewBackground}
       justifyContent="center"
       alignItems="center"
-      p="2rem"
+      p="1rem"
+      position="relative"
       {...restProps}
     >
-      <Box
-        // position={{ sm: 'absolute', md: 'relative' }}
-        justifyContent="center"
-        alignItems="center"
-        height="100%"
-        width="448px"
-      >
-        <Image
-          src="/images/norbert-velescu-web-unsplash.jpg"
-          alt="Spider web"
-          layout="responsive"
-          height="522px"
-          width="448px"
-          priority
-        />
-      </Box>
+      <Image
+        src="/images/norbert-velescu-web-unsplash.jpg"
+        alt="Spider web"
+        layout="fill"
+        objectFit="contain"
+        priority
+      />
     </Flex>
   );
 };

@@ -10,7 +10,7 @@ export const SearchBar = () => {
         rounded="full"
         w="80vw"
         placeholder={t('searchBarPlaceholder')}
-        px="5rem"
+        px="2rem"
         fontSize="sm"
         _focus={{ borderColor: '#F68B1E' }}
       />

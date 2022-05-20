@@ -14,12 +14,18 @@ export const Nav = () => {
   return (
     <NavbarWrapper>
       <Container maxWidth="container.xl">
-        <Flex justifyContent="space-evenly" alignItems="center">
+        <Flex
+          justifyContent={{ base: 'space-between', md: 'space-evenly' }}
+          alignItems="center"
+        >
           <Logo />
-          <VerticalDivider />
+          <VerticalDivider display={{ base: 'none', md: 'flex' }} />
           <HStack spacing={{ base: 16, md: 32 }}>
-            <NavbarItems direction={{ base: 'column', md: 'row' }} />
-            <HStack>
+            <NavbarItems
+              direction={{ base: 'column', md: 'row' }}
+              display={{ base: 'none', md: 'none', lg: 'none', xl: 'flex' }}
+            />
+            <HStack display={{ base: 'none', md: 'flex' }}>
               <ColorModeButton aria-label="Color Mode button" />
               <LanguageMenu />
               <AboutUsMenu />
@@ -28,6 +34,7 @@ export const Nav = () => {
               <SignInButton />
             </HStack>
           </HStack>
+          <HStack display={{ base: 'flex', md: 'none' }}></HStack>
         </Flex>
       </Container>
     </NavbarWrapper>

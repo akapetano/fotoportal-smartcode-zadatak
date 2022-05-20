@@ -25,13 +25,17 @@ export const PhotoActions = ({ ...restProps }: FlexProps) => {
       {...restProps}
     >
       <Divider
-        mb="1rem"
-        mt={{ base: '1rem', md: '0' }}
+        mb={{ base: '0', md: '1rem' }}
         alignSelf={{ base: 'center', md: 'stretch' }}
         justifySelf={{ base: 'center', md: 'stretch' }}
-        width={{ base: '60vw', md: 'auto' }}
+        width={{ base: '80vw', md: 'auto' }}
       />
-      <Flex alignItems="center" justifyContent="center" pb="1rem">
+      <Flex
+        alignItems="center"
+        pl={{ base: '0', md: '1rem' }}
+        pb="1rem"
+        w={{ base: '40vw', md: 'auto' }}
+      >
         <Text
           fontSize="sm"
           textAlign={{ base: 'center', md: 'left' }}
@@ -46,7 +50,8 @@ export const PhotoActions = ({ ...restProps }: FlexProps) => {
         <Checkbox
           colorScheme="orange"
           size="sm"
-          p={{ base: '1rem 0 0 0 ', md: '0.5rem 6.5rem 0 2rem' }}
+          p={{ base: '1rem 0 0 0', md: '0.5rem 6.5rem 0 2rem' }}
+          w={{ base: '70vw', md: 'auto' }}
         >
           {t('downloadWithAuthorSignature')}
         </Checkbox>
@@ -56,7 +61,7 @@ export const PhotoActions = ({ ...restProps }: FlexProps) => {
         mt="2rem"
         alignSelf="center"
         justifySelf="center"
-        width={{ base: '60vw', md: '80%' }}
+        width={{ base: '80vw', md: '80%' }}
       />
     </Flex>
   );
