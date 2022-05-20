@@ -49,7 +49,7 @@ export const MobileMenu = ({ isopen }: IMobileMenuProps) => {
         <ColorModeButton aria-label="Toggle color mode" />
         <LanguageMenu />
         <AboutUsMenu />
-        <CartButton />
+        <CartButton count={2} />
         <SignInButton w="40vw" />
       </VStack>
     </Flex>

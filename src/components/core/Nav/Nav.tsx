@@ -31,7 +31,7 @@ export const Nav = () => {
               <ColorModeButton aria-label="Color Mode button" />
               <LanguageMenu />
               <AboutUsMenu />
-              <CartButton />
+              <CartButton count={6} />
               <VerticalDivider />
               <SignInButton />
             </HStack>
